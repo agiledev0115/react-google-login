@@ -1,8 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
+// Documentation
 // https://firebase.google.com/docs/auth/web/google-signin
 
+// Note: "etsuji-react-test" is a non-existent project.
 const firebaseConfig = {
   apiKey: "AIzaSyDRzeNQHTP5KAxHHtlcPzHN2PD_ZLm4a5M",
   authDomain: "etsuji-react-test.firebaseapp.com",
@@ -22,6 +24,8 @@ export const signInWithGoogle = () => {
     .catch((error) => {console.log(error)})
 };
 
+// If you want to add a handler.
+//
 //export const signInWithGoogle = (handler) => {
 //  return () => {
 //    signInWithPopup(auth, provider).then(handler)

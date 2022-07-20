@@ -7,9 +7,9 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.logoutHandler = this.logoutHandler.bind(this);
     this.userAuthHandler = this.userAuthHandler.bind(this);
     this.getMessage = this.getMessage.bind(this);
+
     this.state = {
       loginUser: null,
       message: "no message"
@@ -18,8 +18,10 @@ export default class App extends React.Component {
 
   userAuthHandler(user) {
     if (user) {
+      // Login
       this.setState({loginUser: user});
     } else {
+      // Logout
       this.setState({
         loginUser: null,
         message: "no message"
@@ -29,10 +31,6 @@ export default class App extends React.Component {
 
   componentDidMount() {
     onAuthStateChanged(auth, this.userAuthHandler);
-  }
-
-  logoutHandler() {
-    signOut(auth).then(() => {this.setState({loginUser: null})})
   }
 
   getMessage() {
@@ -71,9 +69,9 @@ export default class App extends React.Component {
       const photoURL = auth.currentUser.photoURL;
       element = (
         <>
-          <button onClick={this.logoutHandler}>Logout</button>
+          <button onClick={() => signOut(auth)}>Logout</button>
           <h1>Welcome {displayName}!</h1>
-          <img style={{ margin: "10px" }} alt="Profile photo" src={photoURL}/>
+          <img style={{ margin: "10px" }} alt="Profile icon" src={photoURL}/>
           <button onClick={this.getMessage}>Get message from the backend API</button>
           <p>message: {this.state.message}</p>
         </>

@@ -101,12 +101,12 @@ yarn build
 npm install -g firebase-tools
 firebase init
 ```
-- Choose "◯ Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys" and answer the questions as below:
+- Choose "◯ Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys" (with **space** key) and answer the questions as below:
 ```
-? What do you want to use as your public directory? (public) `build`
-? Configure as a single-page app (rewrite all urls to /index.html)? `No`
-? Set up automatic builds and deploys with GitHub? `No`
-? File build/index.html already exists. Overwrite? `No`
+? What do you want to use as your public directory? (public) build
+? Configure as a single-page app (rewrite all urls to /index.html)? No
+? Set up automatic builds and deploys with GitHub? No
+? File build/index.html already exists. Overwrite? No
 ```
 
 2. Modify `firebase.json` as below.

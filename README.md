@@ -140,3 +140,4 @@ firebase deploy
 
 Now you see the **Hosting URL** in the output. Open the URL with your browser to test the application.
 
+![screenshot](/doc/img/screenshot.png)

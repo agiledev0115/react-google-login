@@ -22,8 +22,8 @@ to avoid the CORS restriction. With this feature, Firebase hosting can act as a 
 1. Create a new Google Cloud project from [Cloud Console](https://console.cloud.google.com).
 1. Add the project to Firebase from [Firebase Console](https://console.firebase.google.com).
 1. Add Firebase application from **Project Overview** -> **Project settings** menu. (Click the `</>` icon at the bottom of the page.)
- - Specify "App nickname" as you like.
- - Check "Also setup Firebase Hosting for this app."
+ - Specify **App nickname** as you like.
+ - Check **Also setup Firebase Hosting for this app**
  - Click **Register App**
  - Copy the contents of `const firebaseConfig` on your editor.
  - Click **Next**
